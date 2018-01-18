@@ -2,9 +2,10 @@
  * Java研修生9期グループワーク
  * 仮想在庫システム
  */
-package Database;
+package Database.Reader;
 
 import Constants.ERROR_MESSAGE;
+import Database.DatabaseUtil;
 import static Constants.ERROR_MESSAGE.CANNOT_READ_DATABASE;
 import static Constants.ERROR_MESSAGE.ILLEGAL_VALUE_TYPE;
 import java.sql.Connection;
