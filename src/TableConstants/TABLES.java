@@ -15,7 +15,7 @@ import java.util.List;
  * @since 2018年01月18日
  * @version 1.0
  */
-public interface Table {
+public interface TABLES {
 
     static <T> String getTableName(final Class<T> clazz) {
         String tableName = null;
