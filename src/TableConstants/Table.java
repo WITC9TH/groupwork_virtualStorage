@@ -2,7 +2,7 @@
  * Java研修生9期グループワーク
  * 仮想在庫システム
  */
-package Constants.TableConstants;
+package TableConstants;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
