@@ -4,6 +4,8 @@
  */
 package Database.Reader.Select;
 
+import Database.Reader.SqlHolder;
+
 /**
  * [処理概要]
  * WHERE句付きでSELECT文を実行する際にSQL文を保持するクラス
