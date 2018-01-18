@@ -2,7 +2,7 @@
  * Java研修生9期グループワーク
  * 仮想在庫システム
  */
-package Database.Reader;
+package Database.Reader.Select;
 
 /**
  * [処理概要] データベースの検索を行う際に必要なSQL文を保持するクラスの抽象クラス

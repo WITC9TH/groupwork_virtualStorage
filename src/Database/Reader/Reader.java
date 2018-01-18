@@ -4,6 +4,7 @@
  */
 package Database.Reader;
 
+import Database.Reader.Select.SqlHolder;
 import Constants.ERROR_MESSAGE;
 import Database.DatabaseUtil;
 import static Constants.ERROR_MESSAGE.CANNOT_READ_DATABASE;
