@@ -13,6 +13,12 @@ package Database.Reader.SELECT;
  */
 public class Select extends SqlHolder {
 
+    /**
+     * SQLのSELECT文をWHERE句抜きで実行する際に、SQL文を保持するインスタンスのコンストラクタ。
+     * 検索条件を引数に持つ
+     * @param column 欲しいデータのカラム名
+     * @param table 欲しいデータがあるテーブル名  
+     */
     public Select(final String column, final String table) {
         super(column, table);
         setSql(composeSql());
