@@ -4,6 +4,7 @@
  */
 package Constants.TableConstants;
 
+import static Constants.ERROR_MESSAGE.PASS_ENUM_ONLY;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,23 +52,9 @@ public interface TABLES {
         return sb.toString();
     }
 
-    static <T> List<String> getAllColumnsAsStringList(final Class<T> clazz) {
-        List<String> allColumns = new ArrayList<>();
-
-        if (clazz.isEnum()) {
-            for (Field field : clazz.getFields()) {
-                allColumns.add(field.getName());
-            }
-        }else{
-            throwIllegalArgumentException();
-        }
-
-        return allColumns;
-    }
-
     static void throwIllegalArgumentException() {
         try {
-            throw new IllegalArgumentException("列挙型のクラスインスタンス以外を渡さないでください");
+            throw new IllegalArgumentException(PASS_ENUM_ONLY.getString());
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }
