@@ -1,34 +1,27 @@
-package TableConstants;
+package Constants.TableConstants;
 
 import java.util.List;
 
-public enum PRODUCT_MASTER implements TABLES {
-    P_ID,
+public enum CATEGORY_MASTER {
     C_ID,
-    P_NAME,
-    BUY_PRICE,
-    SELL_PRICE,
+    C_NAME,
     CREATE_DATE,
     CREATE_USER;
- 
+   
     public static String getTableName(){
-        return TABLES.getTableName(PRODUCT_MASTER.class);
+        return TABLES.getTableName(CATEGORY_MASTER.class);
     }
     
     public static String getMainKey() {
-        return P_ID.getColumn();
-    }
-    
-    public static String getForeingKey() {
         return C_ID.getColumn();
     }
     
     public static String getAllColumnsWithComma(){
-        return TABLES.getAllColumnsWithComma(PRODUCT_MASTER.class);
+        return TABLES.getAllColumnsWithComma(CATEGORY_MASTER.class);
     }
     
     public static List<String> getAllColumnsAsStringList(){
-        return TABLES.getAllColumnsAsStringList(PRODUCT_MASTER.class);
+        return TABLES.getAllColumnsAsStringList(CATEGORY_MASTER.class);
     }
 
     public String getColumn() {
