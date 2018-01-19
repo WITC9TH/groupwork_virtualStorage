@@ -26,5 +26,17 @@ public abstract class BusinessLogic{
 		Matcher matcher = pattern.matcher(target);
 		return (matcher.find());
 	}
+    /**
+     * 未入力の場合の処理
+     * @param  target
+     * @return 
+     */
+    public boolean isNull(String target) {
+        boolean result=true;
+            if (target.isEmpty()){
+           result= false;
+            }
+    return result;
+    }
 
 }
