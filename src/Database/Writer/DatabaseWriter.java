@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Java研修生9期グループワーク
+ * 仮想在庫システム
  */
 package Database.Writer;
 
@@ -14,11 +13,17 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
- *
- * @author longi
+ * [処理概要]
+ * データベースへの書き込みを行うクラス
+ * @author  株式会社ワールドインテック SI事業部 福岡営業所 長島雅人
+ * @since   2018年01月18日
+ * @version 1.0
  */
 public class DatabaseWriter {
-
+    /**
+     * データベースへの書き込みを行う
+     * @param psh PreparedStatementHolder型のインスタンス
+     */
     public static void write(final PreparedStatementHolder psh) {
         PreparedStatement pstmt = psh.getPreparedStatement();
         try {

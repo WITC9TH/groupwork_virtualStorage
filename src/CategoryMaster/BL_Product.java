@@ -12,5 +12,5 @@ package CategoryMaster;
  * @version 1.0
  */
 public class BL_Product {
-
+    
 }

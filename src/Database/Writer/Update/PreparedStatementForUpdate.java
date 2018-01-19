@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Java研修生9期グループワーク
+ * 仮想在庫システム
  */
 package Database.Writer.Update;
 
@@ -15,8 +14,11 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 
 /**
- *
- * @author longi
+ * [処理概要]
+ * テーブルの更新をする際に、PreparedStatementを保持するクラス
+ * @author  株式会社ワールドインテック SI事業部 福岡営業所 長島雅人
+ * @since   2018年01月18日
+ * @version 1.0
  */
 public class PreparedStatementForUpdate<X, Y> extends PreparedStatementHolder {
 
@@ -27,6 +29,10 @@ public class PreparedStatementForUpdate<X, Y> extends PreparedStatementHolder {
     private String searchColumn = null;
     private X searchValue = null;
 
+    /**
+     * テーブルの更新をする際に、PreparedStatementを保持するインスタンスを作る
+     * @param ui UpdateInfoクラスのインスタンス
+     */
     public PreparedStatementForUpdate(UpdateInfo ui) {
         this.updatedTable = ui.getUpdatedTable();
         this.allColumnsWithComma = ui.getAllColumnsWithComma();
