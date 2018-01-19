@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Java研修生9期グループワーク
+ * 仮想在庫システム
  */
 package Database.Writer;
 
@@ -12,8 +11,10 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
- *
- * @author longi
+ * [処理概要]データベースへの書き込み関連の操作を行う際に、PreparedStatementを保持するクラス
+ * @author  株式会社ワールドインテック SI事業部 福岡営業所 長島雅人
+ * @since   2018年01月18日
+ * @version 1.0
  */
 public abstract class PreparedStatementHolder {
     private PreparedStatement preparedStatement = null;
