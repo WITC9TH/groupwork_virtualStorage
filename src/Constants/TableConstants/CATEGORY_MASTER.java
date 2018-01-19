@@ -32,10 +32,6 @@ public enum CATEGORY_MASTER {
         return TABLES.getAllColumnsWithComma(CATEGORY_MASTER.class);
     }
     
-    public static List<String> getAllColumnsAsStringList(){
-        return TABLES.getAllColumnsAsStringList(CATEGORY_MASTER.class);
-    }
-
     public String getColumn() {
         return this.name();
     }
