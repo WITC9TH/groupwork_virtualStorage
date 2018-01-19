@@ -34,6 +34,11 @@ public class PreparedStatementForInsert<T> extends PreparedStatementHolder {
     private List<Timestamp> timestampValues = null;
     private int timestampSize = 0;
 
+    /**
+     * データベースへの追加に使うPreparedStatementを準備する
+     * @param insertedTable　値を挿入するテーブル
+     * @param insertedData 　挿入する値
+     */
     public PreparedStatementForInsert(final InsertedTable insertedTable, final InsertedData insertedData) {
         this.table = insertedTable.getTable();
         this.allColumns = insertedTable.getAllColums();

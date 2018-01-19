@@ -40,10 +40,18 @@ public enum ERROR_MESSAGE {
         this.message = message;
     }
 
+    /**
+     * ENUMの値を返す
+     * @return 
+     */
     public String getString() {
         return this.message;
     }
 
+    /**
+     * 引数として受け取った値をエラーメッセージとして表示する
+     * @param errorMessage 
+     */
     public static void showErrorMessage(final String errorMessage) {
         JOptionPane.showMessageDialog(null, errorMessage, ERROR.getString(), JOptionPane.ERROR_MESSAGE);
     }
