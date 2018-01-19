@@ -4,6 +4,7 @@
  */
 package Constants.TableConstants;
 
+import static Constants.ERROR_MESSAGE.PASS_ENUM_ONLY;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
@@ -67,7 +68,7 @@ public interface TABLES {
 
     static void throwIllegalArgumentException() {
         try {
-            throw new IllegalArgumentException("列挙型のクラスインスタンス以外を渡さないでください");
+            throw new IllegalArgumentException(PASS_ENUM_ONLY.getString());
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }
