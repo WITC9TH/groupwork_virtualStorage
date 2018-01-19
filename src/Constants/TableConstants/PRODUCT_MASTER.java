@@ -38,10 +38,6 @@ public enum PRODUCT_MASTER implements TABLES {
         return TABLES.getAllColumnsWithComma(PRODUCT_MASTER.class);
     }
     
-    public static List<String> getAllColumnsAsStringList(){
-        return TABLES.getAllColumnsAsStringList(PRODUCT_MASTER.class);
-    }
-
     public String getColumn() {
         return this.name();
     }
