@@ -61,7 +61,7 @@ public enum PROPERTY {
             Class.forName(property.getProperty(PROPERTY.DRIVER_NAME.getString()));
 
         } catch (ClassNotFoundException e) {
-            ERROR_MESSAGE.showErrorMessage(ERROR_MESSAGE.CANNOT_FIND_PROPERTY_FILE.getString());
+            ERROR_MESSAGE.showErrorMessage(ERROR_MESSAGE.CANNOT_FIND_DRIVER.getString());
             e.printStackTrace();
         }
     }
