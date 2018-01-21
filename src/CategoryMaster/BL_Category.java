@@ -11,6 +11,6 @@ package CategoryMaster;
  * @since   2018年01月19日
  * @version 1.0
  */
-public class BL_Product {
+public class BL_Category {
     
 }
