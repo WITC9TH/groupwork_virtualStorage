@@ -19,7 +19,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import productMaster.UI_Product;
+import ProductMaster.UI_Product;
 
 /**
  * @author 株式会社ワールドインテック SI事業部 福岡営業所 鶴田雄基
