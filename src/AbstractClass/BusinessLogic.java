@@ -50,6 +50,11 @@ public abstract class BusinessLogic {
         return border;
     }
 
+    /* 商品IDが登録済みでないか、データベースと照合を行う
+    * @ param idList
+    * @ param target
+    * @ return
+     */
     public boolean isAuthenticate(final List<String> idList, final String target) {
         if (idList.contains(target)) {
             JOptionPane.showMessageDialog(null, ERROR_ALREADY_EXISTS, "エラー", JOptionPane.ERROR_MESSAGE);
