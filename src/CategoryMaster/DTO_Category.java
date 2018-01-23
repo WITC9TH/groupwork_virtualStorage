@@ -4,6 +4,9 @@
  */
 package CategoryMaster;
 
+import AbstractClass.DTO;
+import javax.swing.JTextField;
+
 /**
  * [処理概要]
  * カテゴリマスタ画面で入力されたデータを保持する
@@ -11,6 +14,21 @@ package CategoryMaster;
  * @since   2018年01月21日
  * @version 1.0
  */
-public class DTO_Category {
+public class DTO_Category extends DTO {
+    private String categoryId   = null;
+    private String categoryName = null;
+    
+    public DTO_Category(final String categoryId, final String categoryName, final JTextField[] jTextFieldArray){
+        super(jTextFieldArray);
+        this.categoryId = categoryId;
+        this.categoryName = categoryName;
+    }
 
+    public String getCategoryId() {
+        return categoryId;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
 }
