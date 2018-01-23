@@ -5,6 +5,10 @@
 package Constants;
 
 import javax.swing.JOptionPane;
+import Constants.ERROR_MESSAGE;
+import static Constants.ERROR_MESSAGE.*;
+
+
 
 /**
  * [処理概要] 定数として保持するエラーメッセージを表示する。
@@ -31,8 +35,11 @@ public enum ERROR_MESSAGE {
     CANNOT_LOAD_SQL("SQL文が読み込めませんでした"),
     CANNOT_SET_VALUES_TO_SQL("SQL文に値がセットできませんでした"),
     CANNOT_UPDATE_DATABASE("データベースが更新できませんでした"),
-    
+    ERROR_IS_NULL("エラー:入力されていない項目があります"),
+    ERROR_WRONG_INPUT("エラー:入力内容に誤りがあります"),
+    ERROR_ALREADY_EXISTS("エラー:入力したIDは既に登録済みです"),
     PASS_ENUM_ONLY("このメソッドの引数には、列挙型のクラスインスタンス以外渡さないでください");
+    
     
     private final String message;
 
