@@ -4,6 +4,7 @@
  */
 package AbstractClass;
 
+import java.util.List;
 import javax.swing.JTextField;
 
 /**
@@ -14,11 +15,11 @@ import javax.swing.JTextField;
  * @version 1.0
  */
 public class DTO {
-    private JTextField[] jTextFieldArray = null;
-    protected DTO(final JTextField[] jTextFieldArray){
-        this.jTextFieldArray = jTextFieldArray;
+    private List<JTextField> jTextFieldList = null;
+    protected DTO(final List<JTextField> jTextFieldList){
+        this.jTextFieldList = jTextFieldList;
     }
-    public JTextField[] getJTextFieldArray(){
-        return this.jTextFieldArray;
+    public List<JTextField> getJTextFieldArray(){
+        return this.jTextFieldList;
     }
 }
