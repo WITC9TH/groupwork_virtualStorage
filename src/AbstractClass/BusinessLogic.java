@@ -6,7 +6,7 @@ package AbstractClass;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+import javax.swing.JOptionPane;
 /**
  *[処理概要] 各ビジネスロジックに共通する処理を提供する
  * @author 株式会社ワールドインテック SI事業部 東京営業所 池田　裕斗
@@ -26,5 +26,17 @@ public abstract class BusinessLogic{
 		Matcher matcher = pattern.matcher(target);
 		return (matcher.find());
 	}
+    /**
+     * 未入力かを確かめる処理
+     * @param  target
+     * @return
+     */
+    public boolean isNull(String target) {
+        boolean result = true;
+            if (target.isEmpty()){
+           result = false;
+            }
+    return result;
+    }
 
 }
