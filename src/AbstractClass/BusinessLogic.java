@@ -4,7 +4,7 @@
  */
 package AbstractClass;
 
-import static Constants.ERROR_MESSAGE.ERROR_ALREADY_EXISTS;
+import static Constants.ERROR_MESSAGE.*;
 import java.awt.Color;
 import java.util.List;
 import java.util.regex.Matcher;
