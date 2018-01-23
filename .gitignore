@@ -2,3 +2,4 @@
 src/Database/Reader/SELECT/Select.java
 src/Database/Reader/SELECT/SqlHolder.java
 /build/
+/nbproject/private/
