@@ -13,6 +13,7 @@ import static Constants.TableConstants.PRODUCT_MASTER.*;
  * @since   2018年01月25日
  * @version 1.0
  */
+
 public class BL_Product extends BusinessLogic{
     public BL_Product(DTO_Product dto){
         super(dto);
@@ -27,5 +28,6 @@ public class BL_Product extends BusinessLogic{
     protected void processNormally() {
         
     }
+
 
 }

@@ -7,6 +7,7 @@ package CategoryMaster;
 import AbstractClass.BusinessLogic;
 import ProductMaster.DTO_Product;
 
+
 /**
  * [処理概要]
  * 商品マスター画面における基幹処理を行う
@@ -15,6 +16,7 @@ import ProductMaster.DTO_Product;
  * @version 1.0
  */
 public class BL_Category extends BusinessLogic {
+
     public BL_Category (DTO_Category dto){
         super(dto);
     }
@@ -28,4 +30,3 @@ public class BL_Category extends BusinessLogic {
     protected void processNormally() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-}
