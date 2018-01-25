@@ -20,6 +20,7 @@ import javax.swing.JTextField;
 import Menu.UI_Menu;
 
 /**
+ * [処理概要]分類マスタ登録のユーザーインターフェースを生成します。
  * @author 株式会社ワールドインテック SI事業部 福岡営業所 鶴田雄基
  * @since 2018年01月18日
  * @version 1.0
@@ -53,7 +54,7 @@ public class UI_Category extends JPanel {
 		checkBtn.setBounds(217, 309, 91, 21);
 		categoryPanel.add(checkBtn);
 
-		JLabel categoryTopLabel = new JLabel("カテゴリマスタ登録");
+		JLabel categoryTopLabel = new JLabel("分類マスタ登録");
 		categoryTopLabel.setSize(new Dimension(72, 19));
 		categoryTopLabel.setFont(new Font("MS UI Gothic", Font.PLAIN, 18));
 		categoryTopLabel.setAlignmentY(0.0f);
