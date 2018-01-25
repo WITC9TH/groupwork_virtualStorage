@@ -22,7 +22,7 @@ public class DTO_Product extends DTO {
     private String buyPrice = null;
     private String sellPrice = null;
 
-    public DTO_Product(final List<JTextField> jTextFieldArray, final String productId, 
+   public DTO_Product(final List<JTextField> jTextFieldArray, final String productId, 
                         final String categoryId, final String productName, 
                         final String buyPrice, final String sellPrice) {
         super(jTextFieldArray);

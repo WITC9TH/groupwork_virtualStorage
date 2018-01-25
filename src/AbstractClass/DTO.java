@@ -15,7 +15,6 @@ import javax.swing.JTextField;
  * @version 1.0
  */
 public class DTO {
-
     private List<JTextField> allJTextField;
 
     protected DTO(final List<JTextField> allJTextFieldjTextField) {
@@ -25,5 +24,4 @@ public class DTO {
     public List<JTextField> getAllJTextField() {
         return allJTextField;
     }
-    
 }

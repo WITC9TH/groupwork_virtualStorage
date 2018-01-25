@@ -19,7 +19,7 @@ public class DTO_Category extends DTO {
     private String categoryId   = null;
     private String categoryName = null;
     
-    public DTO_Category(final List<JTextField> jTextFieldList, final String categoryId, final String categoryName){
+  　public DTO_Category(final List<JTextField> jTextFieldList, final String categoryId, final String categoryName){
         super(jTextFieldList);
         this.categoryId = categoryId;
         this.categoryName = categoryName;
