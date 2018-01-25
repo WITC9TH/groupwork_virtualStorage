@@ -4,6 +4,9 @@
  */
 package CategoryMaster;
 
+import AbstractClass.BusinessLogic;
+import ProductMaster.DTO_Product;
+
 /**
  * [処理概要]
  * 商品マスター画面における基幹処理を行う
@@ -11,6 +14,18 @@ package CategoryMaster;
  * @since   2018年01月19日
  * @version 1.0
  */
-public class BL_Category {
-    
+public class BL_Category extends BusinessLogic {
+    public BL_Category (DTO_Category dto){
+        super(dto);
+    }
+
+    @Override
+    protected boolean callIsValidInput() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    protected void processNormally() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

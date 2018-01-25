@@ -22,9 +22,8 @@ public class DTO_Product extends DTO {
     private String buyPrice = null;
     private String sellPrice = null;
 
-   public DTO_Product(final List<JTextField> jTextFieldArray, final String productId, 
-                        final String categoryId, final String productName, 
-                        final String buyPrice, final String sellPrice) {
+   public DTO_Product(final String productId,final String categoryId, final String productName, 
+                        final String buyPrice, final String sellPrice, final List<JTextField> jTextFieldArray) {
         super(jTextFieldArray);
         this.productId = productId;
         this.categoryId = categoryId;
