@@ -19,6 +19,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import CategoryMaster.UI_Category;
 import ProductMaster.UI_Product;
 
 /**
@@ -30,13 +31,10 @@ import ProductMaster.UI_Product;
 public class UI_Menu {
 
 	private JFrame frame;
-	private JPanel menuPanel = new JPanel();
+	private static JPanel menuPanel = new JPanel();
 	private JPanel productPanel = new JPanel();
 	private JPanel categoryPanel = new JPanel();
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -50,35 +48,28 @@ public class UI_Menu {
 		});
 	}
 
-	/**
-	 * Create the application.
-	 */
 	public UI_Menu() {
 		initialize();
 	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
 	private void initialize() {
 		frame = new JFrame();
 		frame.getContentPane().setSize(new Dimension(700, 480));
 		frame.getContentPane().setLayout(null);
 
-//		JPanel menuPanel = new JPanel();
 		menuPanel.setBounds(0, 0, 684, 441);
 		frame.getContentPane().add(menuPanel);
 		menuPanel.setLayout(null);
 
 		UI_Product productVrb = new UI_Product();
-		productPanel=productVrb.getProductPanel();
+		productPanel = productVrb.getProductPanel();
 		frame.getContentPane().add(productPanel);
 		productPanel.setVisible(false);
 
-//		UI_Category categoryVrb = new UI_Product();
-//		categoryPanel=categoryVrb.getCategoryPanel();
-//		frame.getContentPane().add(categoryPanel);
-//		categoryPanel.setVisible(false);
+		UI_Category categoryVrb = new UI_Category();
+		categoryPanel = categoryVrb.getCategoryPanel();
+		frame.getContentPane().add(categoryPanel);
+		categoryPanel.setVisible(false);
 
 		JLabel menuTopLabel = new JLabel("在庫管理");
 		menuTopLabel.setFont(new Font("MS UI Gothic", Font.PLAIN, 18));
@@ -187,4 +178,29 @@ public class UI_Menu {
 		frame.setBounds(100, 100, 700, 480);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
+
+	public static JPanel getMenuPanel() {
+		return menuPanel;
+	}
+
+	public static void setMenuPanel(JPanel menuPanel) {
+		UI_Menu.menuPanel = menuPanel;
+	}
+
+	public JPanel getProductPanel() {
+		return productPanel;
+	}
+
+	public void setProductPanel(JPanel productPanel) {
+		this.productPanel = productPanel;
+	}
+
+	public JPanel getCategoryPanel() {
+		return categoryPanel;
+	}
+
+	public void setCategoryPanel(JPanel categoryPanel) {
+		this.categoryPanel = categoryPanel;
+	}
+
 }
