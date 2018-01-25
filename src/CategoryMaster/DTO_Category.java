@@ -5,6 +5,7 @@
 package CategoryMaster;
 
 import AbstractClass.DTO;
+import java.util.List;
 import javax.swing.JTextField;
 
 /**
@@ -18,8 +19,8 @@ public class DTO_Category extends DTO {
     private String categoryId   = null;
     private String categoryName = null;
     
-    public DTO_Category(final String categoryId, final String categoryName, final JTextField[] jTextFieldArray){
-        super(jTextFieldArray);
+    public DTO_Category(final List<JTextField> jTextFieldList, final String categoryId, final String categoryName){
+        super(jTextFieldList);
         this.categoryId = categoryId;
         this.categoryName = categoryName;
     }

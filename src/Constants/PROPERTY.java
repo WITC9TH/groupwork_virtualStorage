@@ -4,6 +4,10 @@
  */
 package Constants;
 
+import static Constants.ERROR_MESSAGE.CANNOT_FIND_DRIVER;
+import static Constants.ERROR_MESSAGE.CANNOT_FIND_PROPERTY_FILE;
+import static Constants.ERROR_MESSAGE.CANNOT_READ_PROPERTY_FILE;
+import static Constants.ERROR_MESSAGE.showErrorMessage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -47,21 +51,21 @@ public enum PROPERTY {
             property.load(inputStream);
 
         } catch (FileNotFoundException e) {
-            ERROR_MESSAGE.showErrorMessage(ERROR_MESSAGE.CANNOT_FIND_PROPERTY_FILE.getString());
+            showErrorMessage(CANNOT_FIND_PROPERTY_FILE);
             e.printStackTrace();
 
         } catch (IOException e) {
-            ERROR_MESSAGE.showErrorMessage(ERROR_MESSAGE.CANNOT_READ_PROPERTY_FILE.getString());
+            ERROR_MESSAGE.showErrorMessage(CANNOT_READ_PROPERTY_FILE);
             e.printStackTrace();
         }
     }
 
     private static void loadDriver(final Properties property) {
         try {
-            Class.forName(property.getProperty(PROPERTY.DRIVER_NAME.getString()));
+            Class.forName(property.getProperty(DRIVER_NAME.getString()));
 
         } catch (ClassNotFoundException e) {
-            ERROR_MESSAGE.showErrorMessage(ERROR_MESSAGE.CANNOT_FIND_DRIVER.getString());
+            ERROR_MESSAGE.showErrorMessage(CANNOT_FIND_DRIVER);
             e.printStackTrace();
         }
     }

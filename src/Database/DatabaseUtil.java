@@ -42,7 +42,7 @@ public class DatabaseUtil {
         try {
             con = DriverManager.getConnection(PROPERTY.loadAuthInfo());
         } catch (SQLException e) {
-            ERROR_MESSAGE.showErrorMessage(CANNOT_ESTABLISH_CONNECTION.getString());
+            ERROR_MESSAGE.showErrorMessage(CANNOT_ESTABLISH_CONNECTION);
             e.printStackTrace();
         }
 
@@ -55,7 +55,7 @@ public class DatabaseUtil {
                 try {
                     ac.close();
                 } catch (Exception e) {
-                    ERROR_MESSAGE.showErrorMessage(ABNORMAL_CONNECTION_ENDING.getString());
+                    ERROR_MESSAGE.showErrorMessage(ABNORMAL_CONNECTION_ENDING);
                     e.printStackTrace();
                 }
             }

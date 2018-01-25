@@ -5,6 +5,7 @@
 package ProductMaster;
 
 import AbstractClass.DTO;
+import java.util.List;
 import javax.swing.JTextField;
 
 /**
@@ -15,14 +16,15 @@ import javax.swing.JTextField;
  * @version 1.0
  */
 public class DTO_Product extends DTO {
-
     private String productId = null;
     private String categoryId = null;
     private String productName = null;
     private String buyPrice = null;
     private String sellPrice = null;
 
-    public DTO_Product(final String productId, final String categoryId, final String productName, final String buyPrice, final String sellPrice, final JTextField[] jTextFieldArray) {
+    public DTO_Product(final List<JTextField> jTextFieldArray, final String productId, 
+                        final String categoryId, final String productName, 
+                        final String buyPrice, final String sellPrice) {
         super(jTextFieldArray);
         this.productId = productId;
         this.categoryId = categoryId;
@@ -50,4 +52,5 @@ public class DTO_Product extends DTO {
     public String getSellPrice() {
         return sellPrice;
     }
+
 }

@@ -4,7 +4,8 @@
  */
 package Database.Writer;
 
-import Constants.ERROR_MESSAGE;
+import static Constants.ERROR_MESSAGE.CANNOT_SET_AUTO_COMMIT_FALSE;
+import static Constants.ERROR_MESSAGE.showErrorMessage;
 import Database.DatabaseUtil;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -33,7 +34,7 @@ public abstract class PreparedStatementHolder {
         try{
             con.setAutoCommit(false);
         }catch(SQLException e){
-            ERROR_MESSAGE.showErrorMessage(ERROR_MESSAGE.CANNOT_SET_AUTO_COMMIT_FALSE.getString());
+            showErrorMessage(CANNOT_SET_AUTO_COMMIT_FALSE);
             e.printStackTrace();
         }   
         return con;
