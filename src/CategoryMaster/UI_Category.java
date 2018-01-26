@@ -5,6 +5,8 @@
 
 package CategoryMaster;
 
+import CategoryMaster.BL_Category;
+import CategoryMaster.DTO_Category;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -45,10 +47,10 @@ public class UI_Category extends JPanel {
 						categoryIDText, categoryNameText);
 
 				DTO_Category vrbDto = new DTO_Category(
-						categoryIDText.getText(), categoryNameText.getText(),
-						inputList);
+                                    categoryIDText.getText(), categoryNameText.getText(),
+                                    inputList);
 
-				BL_Category vrbBl = new BL_Category(vrbDto);
+                            BL_Category vrbBl = new BL_Category(vrbDto);
 			}
 		});
 		checkBtn.setBounds(217, 309, 91, 21);

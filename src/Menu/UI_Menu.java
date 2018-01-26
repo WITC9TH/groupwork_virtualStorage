@@ -23,6 +23,7 @@ import CategoryMaster.UI_Category;
 import ProductMaster.UI_Product;
 
 /**
+ * [処理概要]メニュー画面のユーザーインターフェースを生成します。
  * @author 株式会社ワールドインテック SI事業部 福岡営業所 鶴田雄基
  * @since 2018年01月18日
  * @version 1.0
