@@ -20,6 +20,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import CategoryMaster.UI_Category;
+import Login.UI_Login;
 import ProductMaster.UI_Product;
 
 /**
@@ -35,6 +36,7 @@ public class UI_Menu {
 	private static JPanel menuPanel = new JPanel();
 	private JPanel productPanel = new JPanel();
 	private JPanel categoryPanel = new JPanel();
+        private JPanel loginPanel = new JPanel();
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -71,6 +73,11 @@ public class UI_Menu {
 		categoryPanel = categoryVrb.getCategoryPanel();
 		frame.getContentPane().add(categoryPanel);
 		categoryPanel.setVisible(false);
+                
+                UI_Login loginVrb = new UI_Login();
+                loginPanel = loginVrb.getLoginPanel();
+                frame.getContentPane().add(loginPanel);
+		loginPanel.setVisible(false);
 
 		JLabel menuTopLabel = new JLabel("在庫管理");
 		menuTopLabel.setFont(new Font("MS UI Gothic", Font.PLAIN, 18));
@@ -147,6 +154,8 @@ public class UI_Menu {
 		JButton loginButton = new JButton("ログイン");
 		loginButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+                            menuPanel.setVisible(false);
+                            loginPanel.setVisible(true);
 			}
 		});
 		loginButton.setBounds(80, 222, 230, 35);
