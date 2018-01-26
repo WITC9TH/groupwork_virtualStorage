@@ -11,6 +11,10 @@ import static Constants.ERROR_MESSAGE.ERROR_WRONG_INPUT;
 import static Constants.ERROR_MESSAGE.showErrorMessage;
 import Database.Reader.Reader;
 import Database.Reader.Select.Select;
+import Database.Writer.DatabaseWriter;
+import Database.Writer.Insert.InsertedData;
+import Database.Writer.Insert.InsertedTable;
+import Database.Writer.Insert.PreparedStatementForInsert;
 import java.awt.Color;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -41,7 +45,14 @@ public abstract class BusinessLogic {
     }
 
     protected abstract boolean callIsValidInput();
-    protected abstract void    processNormally();
+
+    protected abstract void processNormally();
+
+    protected void register(InsertedData id, InsertedTable it) {
+        if (callIsValidInput()) {
+            DatabaseWriter.write(new PreparedStatementForInsert(it, id));
+        }
+    }
 
     protected boolean isValidInput(final String regex, final int index,
             final String column, final String table) {
@@ -84,7 +95,7 @@ public abstract class BusinessLogic {
             processInvalidInput(ERROR_ALREADY_EXISTS, jTextField);
             isValidIndexValue = false;
         }
-        
+
         return isValidIndexValue;
     }
 
