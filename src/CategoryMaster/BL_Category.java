@@ -5,7 +5,8 @@
 package CategoryMaster;
 
 import AbstractClass.BusinessLogic;
-import AbstractClass.DTO;
+import ProductMaster.DTO_Product;
+
 
 /**
  * [処理概要]
@@ -15,7 +16,17 @@ import AbstractClass.DTO;
  * @version 1.0
  */
 public class BL_Category extends BusinessLogic {
-    public BL_Category(DTO_Category dto){
-        
-    }    
-}
+
+    public BL_Category (DTO_Category dto){
+        super(dto);
+    }
+
+    @Override
+    protected boolean callIsValidInput() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    protected void processNormally() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }

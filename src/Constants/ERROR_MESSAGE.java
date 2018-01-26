@@ -59,7 +59,7 @@ public enum ERROR_MESSAGE {
      * 引数として受け取った値をエラーメッセージとして表示する
      * @param errorMessage 
      */
-    public static void showErrorMessage(final String errorMessage) {
-        JOptionPane.showMessageDialog(null, errorMessage, ERROR.getString(), JOptionPane.ERROR_MESSAGE);
+    public static void showErrorMessage(final ERROR_MESSAGE msg) {
+        JOptionPane.showMessageDialog(null, msg.getString(), ERROR.getString(), JOptionPane.ERROR_MESSAGE);
     }
 }

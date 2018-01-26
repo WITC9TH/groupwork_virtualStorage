@@ -16,15 +16,15 @@ import javax.swing.JTextField;
  * @version 1.0
  */
 public class DTO_Product extends DTO {
-
     private String productId = null;
     private String categoryId = null;
     private String productName = null;
     private String buyPrice = null;
     private String sellPrice = null;
 
-    public DTO_Product(final String productId, final String categoryId, final String productName, final String buyPrice, final String sellPrice, final List<JTextField> jTextFieldList) {
-        super(jTextFieldList);
+   public DTO_Product(final String productId,final String categoryId, final String productName, 
+                        final String buyPrice, final String sellPrice, final List<JTextField> jTextFieldArray) {
+        super(jTextFieldArray);
         this.productId = productId;
         this.categoryId = categoryId;
         this.productName = productName;
@@ -51,4 +51,5 @@ public class DTO_Product extends DTO {
     public String getSellPrice() {
         return sellPrice;
     }
+
 }

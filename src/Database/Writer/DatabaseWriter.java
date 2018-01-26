@@ -33,7 +33,7 @@ public class DatabaseWriter {
             pstmt.getConnection().commit();
             INFORMATIONAL_MESSAGE.showInformationalMessage(UPDATED_SUCCESSFULLY.getString());
         } catch (SQLException e) {
-            ERROR_MESSAGE.showErrorMessage(CANNOT_UPDATE_DATABASE.getString());
+            ERROR_MESSAGE.showErrorMessage(CANNOT_UPDATE_DATABASE);
             e.printStackTrace();
         } finally {
             DatabaseUtil.close(pstmt);

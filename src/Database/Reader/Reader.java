@@ -49,7 +49,7 @@ public class Reader {
             list = retrieveItem(rs, clazz, holder.getColumn());
 
         } catch (SQLException e) {
-            ERROR_MESSAGE.showErrorMessage(CANNOT_READ_DATABASE.getString());
+            ERROR_MESSAGE.showErrorMessage(CANNOT_READ_DATABASE);
             e.printStackTrace();
         }
 

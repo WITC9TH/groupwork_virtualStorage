@@ -7,6 +7,7 @@ package Database.Writer.Insert;
 import static Constants.ERROR_MESSAGE.CANNOT_LOAD_SQL;
 import static Constants.ERROR_MESSAGE.CANNOT_SET_VALUES_TO_SQL;
 import Constants.ERROR_MESSAGE;
+import static Constants.ERROR_MESSAGE.showErrorMessage;
 import Database.Writer.PreparedStatementHolder;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -77,7 +78,7 @@ public class PreparedStatementForInsert<T> extends PreparedStatementHolder {
             pstmt = con.prepareStatement(composeSqlStatement());
             setValuesToPreparedStatement(pstmt);
         } catch (SQLException e) {
-            ERROR_MESSAGE.showErrorMessage(CANNOT_LOAD_SQL.getString());
+            showErrorMessage(CANNOT_LOAD_SQL);
             e.printStackTrace();
         }
         System.out.println(pstmt);
@@ -143,7 +144,7 @@ public class PreparedStatementForInsert<T> extends PreparedStatementHolder {
                 }
             }
         } catch (SQLException e) {
-            ERROR_MESSAGE.showErrorMessage(CANNOT_SET_VALUES_TO_SQL.getString());
+            showErrorMessage(CANNOT_SET_VALUES_TO_SQL);
             e.printStackTrace();
         }
 
