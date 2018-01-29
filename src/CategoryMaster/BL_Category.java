@@ -5,7 +5,20 @@
 package CategoryMaster;
 
 import AbstractClass.BusinessLogic;
-import ProductMaster.DTO_Product;
+import static Constants.INDEX.INDEX_CATEGORY_PRIMARY_KEY;
+import static Constants.OTHER.ADMIN;
+import Constants.REGEX;
+import static Constants.TableConstants.PRODUCT_MASTER.P_ID;
+import static Constants.TableConstants.PRODUCT_MASTER.getTableName;
+import Database.Writer.DatabaseWriter;
+import Database.Writer.Insert.InsertedData;
+import Database.Writer.Insert.InsertedTable;
+import Database.Writer.Insert.PreparedStatementForInsert;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import Constants.TableConstants.CATEGORY_MASTER;
 
 
 /**
@@ -16,18 +29,33 @@ import ProductMaster.DTO_Product;
  * @version 1.0
  */
 public class BL_Category extends BusinessLogic {
-
+    DTO_Category dto = null;
     public BL_Category (DTO_Category dto){
         super(dto);
+        this.dto = dto;
     }
 
     @Override
     protected boolean callIsValidInput() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return isValidInput(REGEX.REGEX_CATEGORY_ID.getRegex(),INDEX_CATEGORY_PRIMARY_KEY.getIndex(),P_ID.getColumn(),getTableName());
     }
 
     @Override
     protected void processNormally() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        List<String> varcharValues = new ArrayList<>();
+        varcharValues.add(dto.getCategoryId());
+        varcharValues.add(dto.getCategoryName());
+        varcharValues.add(ADMIN.getText());
+ 
+        List<Integer> intValues = new ArrayList<>();
+         
+        List<Timestamp> timestampValues = new ArrayList<>();
+        timestampValues.add(new Timestamp(new Date().getTime()));
+ 
+        InsertedData id = new InsertedData(varcharValues, intValues, timestampValues);
+        InsertedTable it =
+                new InsertedTable(CATEGORY_MASTER.getTableName(), CATEGORY_MASTER.getAllColumnsWithComma(), CATEGORY_MASTER.getPrimaryKey(), dto.getCategoryId());
+ 
+        DatabaseWriter.write(new PreparedStatementForInsert(it, id));
     }
 }

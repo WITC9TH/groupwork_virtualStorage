@@ -24,7 +24,7 @@ public enum CATEGORY_MASTER {
         return TABLES.getTableName(CATEGORY_MASTER.class);
     }
     
-    public static String getMainKey() {
+    public static String getPrimaryKey() {
         return C_ID.getColumn();
     }
     

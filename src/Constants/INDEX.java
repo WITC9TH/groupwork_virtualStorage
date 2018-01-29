@@ -13,7 +13,10 @@ package Constants;
  */
 public enum INDEX {
     INDEX_EMPTY(0),
-    INDEX_ILLEGAL_FORMAT(1);
+    INDEX_ILLEGAL_FORMAT(1),
+    
+    INDEX_CATEGORY_PRIMARY_KEY(1),
+    INDEX_PRODUCT_PRIMARY_KEY(0);
     
     private final int index;
     

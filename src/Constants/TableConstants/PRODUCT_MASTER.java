@@ -26,7 +26,7 @@ public enum PRODUCT_MASTER implements TABLES {
         return TABLES.getTableName(PRODUCT_MASTER.class);
     }
     
-    public static String getMainKey() {
+    public static String getPrimaryKey() {
         return P_ID.getColumn();
     }
     

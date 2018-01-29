@@ -13,8 +13,8 @@ package Constants;
  */
 public enum REGEX {
     REGEX_PRODUCT_ID("^[0-9]{0,4}+$"),
-    REGEX_CATEGORY_ID("^[0-9]{0,3}+$"),
-    REGEX_PRICE("^[1-9][0-9]*$");
+    REGEX_CATEGORY_ID("^[0-9]{0,3}+$");
+    
     private final String regex;
     private REGEX(final String regex){
         this.regex=regex;
