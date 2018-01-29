@@ -39,6 +39,10 @@ public enum PROPERTY {
 
     private static final String FILE_PATH = "." + File.separator + "src" + File.separator + "DBLogIn.properties";
 
+    /**
+     * データベースの認証情報をプロパティファイルから読み込む
+     * @return 
+     */
     public static String loadAuthInfo() {
         final Properties property = new Properties();
         loadProperty(property);

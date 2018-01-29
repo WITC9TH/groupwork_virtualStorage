@@ -5,10 +5,10 @@
 package Database.Reader;
 
 
-import Constants.ERROR_MESSAGE;
-import Database.DatabaseUtil;
 import static Constants.ERROR_MESSAGE.CANNOT_READ_DATABASE;
 import static Constants.ERROR_MESSAGE.ILLEGAL_VALUE_TYPE;
+import Constants.ERROR_MESSAGE;
+import Database.DatabaseUtil;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

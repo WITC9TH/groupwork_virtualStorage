@@ -5,7 +5,6 @@
 package Constants;
 
 import javax.swing.JOptionPane;
-import Constants.ERROR_MESSAGE;
 import static Constants.ERROR_MESSAGE.*;
 
 
@@ -38,7 +37,7 @@ public enum ERROR_MESSAGE {
     ERROR_IS_NULL("エラー:入力されていない項目があります"),
     ERROR_WRONG_INPUT("エラー:入力内容に誤りがあります"),
     ERROR_ALREADY_EXISTS("エラー:入力したIDは既に登録済みです"),
-    PASS_ENUM_ONLY("このメソッドの引数には、列挙型のクラスインスタンス以外渡さないでください");
+    PASS_ENUM_ONLY("このメソッドの引数には、列挙型以外渡さないでください");
     
     
     private final String message;
@@ -56,7 +55,7 @@ public enum ERROR_MESSAGE {
     }
 
     /**
-     * 引数として受け取った値をエラーメッセージとして表示する
+     * 引数として受け取った列挙型をエラーメッセージとして表示する
      * @param errorMessage 
      */
     public static void showErrorMessage(final ERROR_MESSAGE msg) {

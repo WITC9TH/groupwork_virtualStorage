@@ -38,5 +38,9 @@ public abstract class SqlHolder {
         this.sql = sql;
     }
 
-    protected abstract String composeSql();
+    /**
+     * 実行したいSQL文を返す
+     * @return 
+     */
+    protected abstract String composeSqlStatement();
 }

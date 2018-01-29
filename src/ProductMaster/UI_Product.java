@@ -9,6 +9,8 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 import java.util.Arrays;
 import java.util.List;
 
@@ -24,9 +26,7 @@ import Database.Reader.Reader;
 import Database.Reader.SqlHolder;
 import Database.Reader.Select.Select;
 import Menu.UI_Menu;
-import ProductMaster.DTO_Product;
-import java.awt.event.FocusAdapter;
-import java.awt.event.FocusEvent;
+
 
 /**
  * [処理概要]商品マスタ登録のユーザーインターフェースを生成します。

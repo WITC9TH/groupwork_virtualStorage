@@ -29,11 +29,11 @@ public class SelectWhere extends SqlHolder {
         super(column, table);
         this.conditionColumn = conditionColumn;
         this.conditionValue = conditionValue;
-        setSql(composeSql());
+        setSql(composeSqlStatement());
     }
     
     @Override
-    protected String composeSql() { 
+    protected String composeSqlStatement() { 
         StringBuilder sql = new StringBuilder();
         sql.append("SELECT ");
         sql.append(getColumn());

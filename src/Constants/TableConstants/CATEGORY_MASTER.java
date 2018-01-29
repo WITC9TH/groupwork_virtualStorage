@@ -5,8 +5,6 @@
 
 package Constants.TableConstants;
 
-import java.util.List;
-
 /**
  * [処理概要]
  * 分類マスタに関する定数と処理を定義する

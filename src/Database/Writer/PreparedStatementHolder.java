@@ -40,6 +40,15 @@ public abstract class PreparedStatementHolder {
         return con;
     }
     
+    /**
+     * PreparedStatementを返す
+     * @return 
+     */
     protected abstract PreparedStatement composePreparedStatement();
+    
+    /**
+     * SQL文を返す
+     * @return 
+     */
     protected abstract String composeSqlStatement();
 }

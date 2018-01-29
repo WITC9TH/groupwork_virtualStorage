@@ -25,6 +25,10 @@ public class DatabaseUtil {
     private DatabaseUtil() {
     }
 
+    /**
+     * データベースへの接続を返す
+     * @return 
+     */
     public static Connection getConnectionInstance() {
         if (DatabaseUtil.con == null) {
             synchronized (DatabaseUtil.class) {
@@ -49,6 +53,10 @@ public class DatabaseUtil {
         return con;
     }
 
+    /**
+     * AutoCloseable型のインスタンスを可変長引数として受け取り、接続を切断する
+     * @param acArray 
+     */
     public static void close(AutoCloseable... acArray) {
         for (AutoCloseable ac : acArray) {
             if (ac != null) {

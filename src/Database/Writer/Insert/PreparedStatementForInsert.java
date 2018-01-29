@@ -96,7 +96,6 @@ public class PreparedStatementForInsert<T> extends PreparedStatementHolder {
     @Override
     protected String composeSqlStatement() {
         StringBuilder sb = new StringBuilder();
-        //sb.append(TABLE.DISABLE_FOREIGN_KEY_CHECK());
         sb.append("INSERT INTO ");
         sb.append(table);
         sb.append(" SELECT ");
@@ -120,7 +119,6 @@ public class PreparedStatementForInsert<T> extends PreparedStatementHolder {
             sb.append(searchValue);
         }
         sb.append(") ");
-        //sb.append(TABLE.ENABLE_FOREIGN_KEY_CHECK());
         return sb.toString();
     }
 

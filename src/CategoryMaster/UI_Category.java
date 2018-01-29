@@ -5,8 +5,6 @@
 
 package CategoryMaster;
 
-import CategoryMaster.BL_Category;
-import CategoryMaster.DTO_Category;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;

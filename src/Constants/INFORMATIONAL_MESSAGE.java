@@ -27,6 +27,10 @@ public enum INFORMATIONAL_MESSAGE {
         return this.message;
     }
     
+    /**
+     * 処理の正常終了などの、プログラムの進行に関する情報を表示する
+     * @param infomationalMessage 
+     */
     public static void showInformationalMessage(final String infomationalMessage){
         JOptionPane.showMessageDialog(null, infomationalMessage, INFORMATION.getString(), JOptionPane.INFORMATION_MESSAGE);
     }

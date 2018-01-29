@@ -4,10 +4,10 @@
  */
 package Database.Writer;
 
-import Constants.ERROR_MESSAGE;
 import static Constants.ERROR_MESSAGE.CANNOT_UPDATE_DATABASE;
-import Constants.INFORMATIONAL_MESSAGE;
 import static Constants.INFORMATIONAL_MESSAGE.UPDATED_SUCCESSFULLY;
+import Constants.ERROR_MESSAGE;
+import Constants.INFORMATIONAL_MESSAGE;
 import Database.DatabaseUtil;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;

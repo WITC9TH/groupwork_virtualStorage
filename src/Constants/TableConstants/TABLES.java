@@ -6,8 +6,6 @@ package Constants.TableConstants;
 
 import static Constants.ERROR_MESSAGE.PASS_ENUM_ONLY;
 import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * [処理概要] テーブル関連の列挙型に共通する処理を定義する

@@ -21,11 +21,11 @@ public class Select extends SqlHolder{
      */
     public Select(final String column, final String table) {
         super(column,table);
-        setSql(composeSql());
+        setSql(composeSqlStatement());
     }
 
     @Override
-    protected String composeSql() {
+    protected String composeSqlStatement() {
         StringBuilder sql = new StringBuilder();
         sql.append("SELECT ");
         sql.append(getColumn());
