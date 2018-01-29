@@ -7,7 +7,7 @@ package ProductMaster;
 import AbstractClass.BusinessLogic;
 import static Constants.TableConstants.PRODUCT_MASTER.*;
 import static Constants.REGEX.REGEX_PRODUCT_ID;
-import static Constants.INDEX.INDEX_PRODUCT_PRIMARY_KEY;
+import static Constants.NUMBER.INDEX_PRODUCT_PRIMARY_KEY;
 
 import java.util.List;
 import java.sql.Timestamp;
@@ -18,7 +18,7 @@ import Database.Writer.Insert.InsertedData;
 import Database.Writer.Insert.InsertedTable;
 import Database.Writer.Insert.PreparedStatementForInsert;
 import java.util.Date;
-import static Constants.OTHER.ADMIN;
+import static Constants.TEXT.ADMIN;
  
 import Constants.TableConstants.PRODUCT_MASTER;
  
@@ -41,7 +41,7 @@ public class BL_Product extends BusinessLogic{
     
     @Override
     protected boolean callIsValidInput() {
-        return isValidInput(REGEX_PRODUCT_ID.getRegex(),INDEX_PRODUCT_PRIMARY_KEY.getIndex(),P_ID.getColumn(),getTableName());
+        return isValidInput(REGEX_PRODUCT_ID.getRegex(),INDEX_PRODUCT_PRIMARY_KEY.getNumber(),P_ID.getColumn(),getTableName());
     }
 
     @Override

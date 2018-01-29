@@ -4,8 +4,8 @@
  */
 package CategoryMaster;
 
-import static Constants.INDEX.INDEX_CATEGORY_PRIMARY_KEY;
-import static Constants.OTHER.ADMIN;
+import static Constants.NUMBER.INDEX_CATEGORY_PRIMARY_KEY;
+import static Constants.TEXT.ADMIN;
 import static Constants.TableConstants.PRODUCT_MASTER.P_ID;
 import static Constants.TableConstants.PRODUCT_MASTER.getTableName;
 import Constants.REGEX;
@@ -37,7 +37,7 @@ public class BL_Category extends BusinessLogic {
 
     @Override
     protected boolean callIsValidInput() {
-        return isValidInput(REGEX.REGEX_CATEGORY_ID.getRegex(),INDEX_CATEGORY_PRIMARY_KEY.getIndex(),P_ID.getColumn(),getTableName());
+        return isValidInput(REGEX.REGEX_CATEGORY_ID.getRegex(),INDEX_CATEGORY_PRIMARY_KEY.getNumber(),P_ID.getColumn(),getTableName());
     }
 
     @Override

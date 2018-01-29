@@ -6,25 +6,27 @@ package Constants;
 
 /**
  * [処理概要]
- * 配列やリストの添え字を定数としてまとめる。
+ * 配列やリストの添え字、フォントサイズなどの数字を定数としてまとめる。
  * @author  株式会社ワールドインテック SI事業部 福岡営業所 長島雅人
  * @since   2018年01月25日
  * @version 1.0
  */
-public enum INDEX {
+public enum NUMBER {
     INDEX_EMPTY(0),
     INDEX_ILLEGAL_FORMAT(1),
     
     INDEX_CATEGORY_PRIMARY_KEY(1),
-    INDEX_PRODUCT_PRIMARY_KEY(0);
+    INDEX_PRODUCT_PRIMARY_KEY(0),
     
-    private final int index;
+    FONT_SIZE(18);
     
-    INDEX(final int index){
-        this.index = index;
+    private final int number;
+    
+    NUMBER(final int number){
+        this.number = number;
     }
     
-    public int getIndex(){
-        return this.index;
+    public int getNumber(){
+        return this.number;
     }
 }
