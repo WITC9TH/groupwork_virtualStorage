@@ -12,8 +12,8 @@ package Constants.TableConstants;
  * @version 1.0
  */
 public enum ACCOUNT_MASTER implements TABLES {
-    U_ID,
-    U_PW,
+    USER_ID,
+    USER_PW,
     CREATE_DATE,
     CREATE_USER;
         
@@ -22,7 +22,7 @@ public enum ACCOUNT_MASTER implements TABLES {
     }
     
     public static String getMainKey(){
-        return U_ID.getColumn();
+        return USER_ID.getColumn();
     }
     
     public static String getAllColumnsWithComma(){
