@@ -7,7 +7,7 @@ package ProductMaster;
 import AbstractClass.BL_Master;
 import static Constants.TableConstants.PRODUCT_MASTER.*;
 import static Constants.REGEX.REGEX_PRODUCT_ID;
-import static Constants.NUMBER.INDEX_PRODUCT_PRIMARY_KEY;
+import static Constants.NUMBER.*;
 import static Constants.TEXT.ADMIN;
 
 import java.util.List;
@@ -39,7 +39,7 @@ public class BL_Product extends BL_Master {
 
     @Override //正しい入力情報
     protected boolean callIsValidInput() {
-        return isValidInput(REGEX_PRODUCT_ID.getRegex(), INDEX_PRODUCT_PRIMARY_KEY.getNumber, P_ID.getColumn(), getTableName());
+        return isValidInput(REGEX_PRODUCT_ID.getRegex(), INDEX_PRODUCT_PRIMARY_KEY.getNumber(), P_ID.getColumn(), getTableName());
     }
 
     @Override
