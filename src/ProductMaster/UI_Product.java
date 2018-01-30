@@ -79,7 +79,7 @@ public class UI_Product extends JPanel {
         productTopLabel.setAlignmentY(0.0f);
         productTopLabel.setAlignmentX(0.5f);
         productTopLabel.setBounds(285, 33, 80, 47);
-        productTopLabel.setSize(productTopLabel.getSize());
+        productTopLabel.setSize(productTopLabel.getPreferredSize());
         productPanel.add(productTopLabel);
 
         JLabel productIDLabel = new JLabel(PRODUCT_ID.getText());
