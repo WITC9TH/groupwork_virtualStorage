@@ -4,21 +4,24 @@
  */
 package ProductMaster;
 
-import AbstractClass.BL_Master;
+import AbstractClass.BusinessLogic;
+
 import static Constants.TableConstants.PRODUCT_MASTER.*;
 import static Constants.REGEX.REGEX_PRODUCT_ID;
 import static Constants.NUMBER.*;
 import static Constants.TEXT.ADMIN;
+import Constants.TableConstants.PRODUCT_MASTER;
 
 import java.util.List;
-import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
+import java.sql.Timestamp;
 
 import Database.Writer.Insert.InsertedData;
 import Database.Writer.Insert.InsertedTable;
-import java.util.Date;
+import Database.Writer.DatabaseWriter;
+import Database.Writer.Insert.PreparedStatementForInsert;
 
-import Constants.TableConstants.PRODUCT_MASTER;
 
 /**
  * [処理概要] 商品マスタ機能の処理を行う
@@ -27,7 +30,7 @@ import Constants.TableConstants.PRODUCT_MASTER;
  * @since 2018年01月25日
  * @version 1.0
  */
-public class BL_Product extends BL_Master {
+public class BL_Product extends BusinessLogic {
 
     private DTO_Product dto = null;
 
@@ -37,7 +40,7 @@ public class BL_Product extends BL_Master {
 
     }
 
-    @Override //正しい入力情報
+    @Override 
     protected boolean callIsValidInput() {
         return isValidInput(REGEX_PRODUCT_ID.getRegex(), INDEX_PRODUCT_PRIMARY_KEY.getNumber(), P_ID.getColumn(), getTableName());
     }
@@ -60,6 +63,6 @@ public class BL_Product extends BL_Master {
         InsertedData id = new InsertedData(varcharValues, intValues, timestampValues);
         InsertedTable it = new InsertedTable(PRODUCT_MASTER.getTableName(), PRODUCT_MASTER.getAllColumnsWithComma(),
                 PRODUCT_MASTER.getPrimaryKey(), dto.getProductId());
-        super.register(id, it);
+        DatabaseWriter.write(new PreparedStatementForInsert(it, id));
     }
 }
