@@ -22,6 +22,9 @@ import javax.swing.JPanel;
 import CategoryMaster.UI_Category;
 import ProductMaster.UI_Product;
 
+import static Constants.UI_MENU.*;
+import static Constants.NUMBER.FONT_SIZE;
+
 /**
  * [処理概要]メニュー画面のユーザーインターフェースを生成します。
  * @author 株式会社ワールドインテック SI事業部 福岡営業所 鶴田雄基
@@ -73,8 +76,8 @@ public class UI_Menu {
 		frame.getContentPane().add(categoryPanel);
 		categoryPanel.setVisible(false);
                 
-		JLabel menuTopLabel = new JLabel("在庫管理");
-		menuTopLabel.setFont(new Font("MS UI Gothic", Font.PLAIN, 18));
+		JLabel menuTopLabel = new JLabel(STORAGE_MANAGEMENT.getText());
+		menuTopLabel.setFont(new Font(FONT_GOTHIC.getText(), Font.PLAIN, FONT_SIZE.getNumber()));
 		menuTopLabel.setAlignmentY(Component.TOP_ALIGNMENT);
 		menuTopLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 		menuTopLabel.setBounds(288, 28, 80, 47);
@@ -82,50 +85,50 @@ public class UI_Menu {
 		menuPanel.add(menuTopLabel);
 
 		Calendar cal = Calendar.getInstance();
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+		SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT.getText());
 		String strToday = sdf.format(cal.getTime());
 
 		JLabel todayLabel = new JLabel(strToday);
 		todayLabel.setSize(new Dimension(72, 19));
-		todayLabel.setFont(new Font("MS UI Gothic", Font.PLAIN, 18));
+		todayLabel.setFont(new Font(FONT_GOTHIC.getText(), Font.PLAIN, FONT_SIZE.getNumber()));
 		todayLabel.setAlignmentY(0.0f);
 		todayLabel.setAlignmentX(0.5f);
 		todayLabel.setBounds(491, 56, 72, 19);
 		todayLabel.setSize(todayLabel.getPreferredSize());
 		menuPanel.add(todayLabel);
 
-		JLabel masterLabel = new JLabel("マスタ機能");
+		JLabel masterLabel = new JLabel(MASTER_FUNCTION.getText());
 		masterLabel.setSize(new Dimension(72, 19));
-		masterLabel.setFont(new Font("MS UI Gothic", Font.PLAIN, 18));
+		masterLabel.setFont(new Font(FONT_GOTHIC.getText(), Font.PLAIN, FONT_SIZE.getNumber()));
 		masterLabel.setAlignmentY(0.0f);
 		masterLabel.setAlignmentX(0.5f);
 		masterLabel.setBounds(48, 74, 72, 19);
 		masterLabel.setSize(masterLabel.getPreferredSize());
 		menuPanel.add(masterLabel);
 
-		JLabel transactionLabel = new JLabel("トランザクション処理");
+		JLabel transactionLabel = new JLabel(TRANSACTION_FUNCTION.getText());
 		transactionLabel.setSize(new Dimension(72, 19));
-		transactionLabel.setFont(new Font("MS UI Gothic", Font.PLAIN, 18));
+		transactionLabel.setFont(new Font(FONT_GOTHIC.getText(), Font.PLAIN, FONT_SIZE.getNumber()));
 		transactionLabel.setAlignmentY(0.0f);
 		transactionLabel.setAlignmentX(0.5f);
 		transactionLabel.setBounds(48, 193, 72, 19);
 		transactionLabel.setSize(transactionLabel.getPreferredSize());
 		menuPanel.add(transactionLabel);
 
-		JLabel systemLabel = new JLabel("システム終了");
+		JLabel systemLabel = new JLabel(END_SYSTEM.getText());
 		systemLabel.setSize(new Dimension(72, 19));
-		systemLabel.setFont(new Font("MS UI Gothic", Font.PLAIN, 18));
+		systemLabel.setFont(new Font(FONT_GOTHIC.getText(), Font.PLAIN, FONT_SIZE.getNumber()));
 		systemLabel.setAlignmentY(0.0f);
 		systemLabel.setAlignmentX(0.5f);
 		systemLabel.setBounds(48, 312, 72, 19);
 		systemLabel.setSize(systemLabel.getPreferredSize());
 		menuPanel.add(systemLabel);
 
-		JButton userRegistrationButton = new JButton("ユーザー登録");
+		JButton userRegistrationButton = new JButton(USER_REGISTRATION.getText());
 		userRegistrationButton.setBounds(80, 103, 230, 35);
 		menuPanel.add(userRegistrationButton);
 
-		JButton categoryButton = new JButton("分類マスタ登録");
+		JButton categoryButton = new JButton(CATEGOR_MASTER_REGISTRATION.getText());
 		categoryButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				menuPanel.setVisible(false);
@@ -135,7 +138,7 @@ public class UI_Menu {
 		categoryButton.setBounds(80, 148, 230, 35);
 		menuPanel.add(categoryButton);
 
-		JButton productButton = new JButton("商品マスタ登録");
+		JButton productButton = new JButton(PRODUCT_MASTER_REGISTRATION.getText());
 		productButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				menuPanel.setVisible(false);
@@ -145,7 +148,7 @@ public class UI_Menu {
 		productButton.setBounds(386, 103, 230, 35);
 		menuPanel.add(productButton);
 
-		JButton loginButton = new JButton("ログイン");
+		JButton loginButton = new JButton(LOGIN.getText());
 		loginButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
                             menuPanel.setVisible(false);
@@ -155,11 +158,11 @@ public class UI_Menu {
 		loginButton.setBounds(80, 222, 230, 35);
 		menuPanel.add(loginButton);
 
-		JButton inputBuyDataButton = new JButton("仕入データ入力");
+		JButton inputBuyDataButton = new JButton(BUY_DATA_INPUT.getText());
 		inputBuyDataButton.setBounds(386, 222, 230, 35);
 		menuPanel.add(inputBuyDataButton);
 
-		JButton inputSellDataButton = new JButton("売り上げデータ入力");
+		JButton inputSellDataButton = new JButton(SELL_DATA_INPUT.getText());
 		inputSellDataButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -167,11 +170,11 @@ public class UI_Menu {
 		inputSellDataButton.setBounds(80, 267, 230, 35);
 		menuPanel.add(inputSellDataButton);
 
-		JButton checkStockButton = new JButton("在庫確認（商品別）");
+		JButton checkStockButton = new JButton(CHECK_INDIVIDUAL_ITEM.getText());
 		checkStockButton.setBounds(386, 267, 230, 35);
 		menuPanel.add(checkStockButton);
 
-		JButton exitButton = new JButton("システム終了");
+		JButton exitButton = new JButton(END_SYSTEM.getText());
 		exitButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);

@@ -10,18 +10,7 @@ package Constants;
  * @since 2018年01月29日
  */
 public enum TEXT {
-    ADMIN("admin"),
-    CONFIRMATION("確認"),
-    UI_GOTHIC("MS UI Gothic"),
-    PRODUCT_ID("商品ID："),
-    CATEGORY_ID("カテゴリID："),
-    PRODUCT_NAME("商品名："),
-    BUYING_PRICE("仕入れ価格:"),
-    SELLING_PRICE("売上価格:"),
-    INITIALIZATION("初期化"),
-    GO_BACK("戻る"),
-    PRODUCT_MASTER_REGISTRATION("商品マスタ登録");
-    
+    ADMIN("admin");
     
     private final String text;
     private TEXT(final String text){

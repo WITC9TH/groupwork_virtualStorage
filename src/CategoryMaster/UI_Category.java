@@ -19,6 +19,9 @@ import javax.swing.JTextField;
 
 import Menu.UI_Menu;
 
+import static Constants.UI_CATEGORY.*;
+import static Constants.NUMBER.FONT_SIZE;
+
 /**
  * [処理概要]分類マスタ登録のユーザーインターフェースを生成します。
  * @author 株式会社ワールドインテック SI事業部 福岡営業所 鶴田雄基
@@ -38,7 +41,7 @@ public class UI_Category extends JPanel {
 		categoryPanel.setBounds(0, 0, 684, 441);
 		categoryPanel.setLayout(null);
 
-		JButton checkBtn = new JButton("確認");
+		JButton checkBtn = new JButton(CONFIRMATION.getText());
 		checkBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				List<JTextField> inputList = Arrays.asList(
@@ -54,16 +57,16 @@ public class UI_Category extends JPanel {
 		checkBtn.setBounds(217, 309, 91, 21);
 		categoryPanel.add(checkBtn);
 
-		JLabel categoryTopLabel = new JLabel("分類マスタ登録");
+		JLabel categoryTopLabel = new JLabel(CATEGORY_MASTER_REGISTRATION.getText());
 		categoryTopLabel.setSize(new Dimension(72, 19));
-		categoryTopLabel.setFont(new Font("MS UI Gothic", Font.PLAIN, 18));
+		categoryTopLabel.setFont(new Font(FONT_GOTHIC.getText(), Font.PLAIN,FONT_SIZE.getNumber()));
 		categoryTopLabel.setAlignmentY(0.0f);
 		categoryTopLabel.setAlignmentX(0.5f);
 		categoryTopLabel.setBounds(285, 33, 80, 47);
 		categoryTopLabel.setSize(categoryTopLabel.getPreferredSize());
 		categoryPanel.add(categoryTopLabel);
 
-		JLabel categoryIDLabel = new JLabel("分類ID：");
+		JLabel categoryIDLabel = new JLabel(CATEGORY_ID.getText());
 		categoryIDLabel.setSize(new Dimension(72, 19));
 		categoryIDLabel.setFont(new Font("MS UI Gothic", Font.PLAIN, 18));
 		categoryIDLabel.setAlignmentY(0.0f);
@@ -72,9 +75,9 @@ public class UI_Category extends JPanel {
 		categoryIDLabel.setSize(categoryIDLabel.getPreferredSize());
 		categoryPanel.add(categoryIDLabel);
 
-		JLabel categoryNameLabel = new JLabel("分類名：");
+		JLabel categoryNameLabel = new JLabel(CATEGORY_NAME.getText());
 		categoryNameLabel.setSize(new Dimension(72, 19));
-		categoryNameLabel.setFont(new Font("MS UI Gothic", Font.PLAIN, 18));
+		categoryNameLabel.setFont(new Font(FONT_GOTHIC.getText(), Font.PLAIN, FONT_SIZE.getNumber()));
 		categoryNameLabel.setAlignmentY(0.0f);
 		categoryNameLabel.setAlignmentX(0.5f);
 		categoryNameLabel.setBounds(217, 161, 76, 19);
@@ -91,7 +94,7 @@ public class UI_Category extends JPanel {
 		categoryNameText.setBounds(392, 163, 96, 19);
 		categoryPanel.add(categoryNameText);
 
-		JButton initializeBtn = new JButton("初期化");
+		JButton initializeBtn = new JButton(INITIALIZATION.getText());
 		initializeBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				categoryIDText.setText(null);
@@ -101,7 +104,7 @@ public class UI_Category extends JPanel {
 		initializeBtn.setBounds(397, 309, 91, 21);
 		categoryPanel.add(initializeBtn);
 
-		JButton returnToMenuBtn = new JButton("戻る");
+		JButton returnToMenuBtn = new JButton(GO_BACK.getText());
 		returnToMenuBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				UI_Menu.getMenuPanel().setVisible(true);

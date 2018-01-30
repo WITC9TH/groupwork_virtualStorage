@@ -21,7 +21,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import static Constants.TEXT.*;
+import static Constants.UI_PRODUCT.*;
 import static Constants.NUMBER.FONT_SIZE;
 import Constants.TableConstants.CATEGORY_MASTER;
 import Database.Reader.Reader;
@@ -75,7 +75,7 @@ public class UI_Product extends JPanel {
 
         JLabel productTopLabel = new JLabel(PRODUCT_MASTER_REGISTRATION.getText());
         productTopLabel.setSize(new Dimension(72, 19));
-        productTopLabel.setFont(new Font(UI_GOTHIC.getText(), Font.PLAIN, FONT_SIZE.getNumber()));
+        productTopLabel.setFont(new Font(FONT_GOTHIC.getText(), Font.PLAIN, FONT_SIZE.getNumber()));
         productTopLabel.setAlignmentY(0.0f);
         productTopLabel.setAlignmentX(0.5f);
         productTopLabel.setBounds(285, 33, 80, 47);
@@ -84,7 +84,7 @@ public class UI_Product extends JPanel {
 
         JLabel productIDLabel = new JLabel(PRODUCT_ID.getText());
         productIDLabel.setSize(new Dimension(72, 19));
-        productIDLabel.setFont(new Font(UI_GOTHIC.getText(), Font.PLAIN, 18));
+        productIDLabel.setFont(new Font(FONT_GOTHIC.getText(), Font.PLAIN, 18));
         productIDLabel.setAlignmentY(0.0f);
         productIDLabel.setAlignmentX(0.5f);
         productIDLabel.setBounds(217, 116, 76, 19);
@@ -93,7 +93,7 @@ public class UI_Product extends JPanel {
 
         JLabel categoryIDLabel = new JLabel(CATEGORY_ID.getText());
         categoryIDLabel.setSize(new Dimension(72, 19));
-        categoryIDLabel.setFont(new Font(UI_GOTHIC.getText(), Font.PLAIN, FONT_SIZE.getNumber()));
+        categoryIDLabel.setFont(new Font(FONT_GOTHIC.getText(), Font.PLAIN, FONT_SIZE.getNumber()));
         categoryIDLabel.setAlignmentY(0.0f);
         categoryIDLabel.setAlignmentX(0.5f);
         categoryIDLabel.setBounds(217, 161, 76, 19);
@@ -102,7 +102,7 @@ public class UI_Product extends JPanel {
 
         JLabel productNameLabel = new JLabel(PRODUCT_NAME.getText());
         productNameLabel.setSize(new Dimension(72, 19));
-        productNameLabel.setFont(new Font(UI_GOTHIC.getText(), Font.PLAIN, FONT_SIZE.getNumber()));
+        productNameLabel.setFont(new Font(FONT_GOTHIC.getText(), Font.PLAIN, FONT_SIZE.getNumber()));
         productNameLabel.setAlignmentY(0.0f);
         productNameLabel.setAlignmentX(0.5f);
         productNameLabel.setBounds(217, 209, 76, 19);
@@ -111,7 +111,7 @@ public class UI_Product extends JPanel {
 
         JLabel inputPriceLabel = new JLabel(BUYING_PRICE.getText());
         inputPriceLabel.setSize(new Dimension(72, 19));
-        inputPriceLabel.setFont(new Font(UI_GOTHIC.getText(), Font.PLAIN, FONT_SIZE.getNumber()));
+        inputPriceLabel.setFont(new Font(FONT_GOTHIC.getText(), Font.PLAIN, FONT_SIZE.getNumber()));
         inputPriceLabel.setAlignmentY(0.0f);
         inputPriceLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         inputPriceLabel.setBounds(217, 257, 76, 19);
@@ -120,7 +120,7 @@ public class UI_Product extends JPanel {
 
         JLabel outputPriceLabel = new JLabel(SELLING_PRICE.getText());
         outputPriceLabel.setSize(new Dimension(72, 19));
-        outputPriceLabel.setFont(new Font(UI_GOTHIC.getText(), Font.PLAIN, FONT_SIZE.getNumber()));
+        outputPriceLabel.setFont(new Font(FONT_GOTHIC.getText(), Font.PLAIN, FONT_SIZE.getNumber()));
         outputPriceLabel.setAlignmentY(0.0f);
         outputPriceLabel.setAlignmentX(0.5f);
         outputPriceLabel.setBounds(217, 305, 76, 19);
